@@ -1,0 +1,118 @@
+/* Sfondo giallo a tutta pagina */
+:host {
+  display: block;
+  background: #FFEB3B; /* giallo vivace */
+  min-height: 100vh;
+  padding: 2rem 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenitore centrale bianco */
+.container {
+  background: #fff;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* Titolo */
+.container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+/* Variabili colori */
+:root {
+  --primary: #4CAF50;
+  --primary-hover: #45A049;
+  --danger: #F44336;
+  --danger-hover: #E53935;
+  --text-color: #333;
+}
+
+/* Select e input */
+select,
+input {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid #8d0101;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(76,175,80,0.2);
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 0.6rem 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.buttons button:first-child {
+  background: #00e676;            /* verde brillante */
+  box-shadow: 0 0 8px rgba(0,230,118,0.7);
+}
+.buttons button:first-child:hover {
+  background: #00c853;
+  box-shadow: 0 0 12px rgba(0,200,83,0.9);
+}
+
+.buttons button:last-child {
+  background: #ff1744;            /* rosso fuoco */
+  box-shadow: 0 0 8px rgba(255,23,68,0.7);
+}
+.buttons button:last-child:hover {
+   background: #f01440;
+  box-shadow: 0 0 12px rgba(240,20,64,0.9);
+}
+
+.buttons button:active {
+    transform: scale(0.95);
+  box-shadow: none;
+}
+
+/* Display timer */
+.display {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+  background: #f65621;
+  padding: 0.8rem 0;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+/* Piccoli dettagli */
+.custom-input small {
+  color: gray;
+  font-size: 0.85rem;
+}

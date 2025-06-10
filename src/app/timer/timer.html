@@ -1,0 +1,33 @@
+<!-- Barra di progresso sopra al timer -->
+<egg-progress-bar [progress]="remaining / totalSeconds"></egg-progress-bar>
+
+<div class="container">
+  <h1>Egg Timer 🥚</h1>
+
+  <label for="mode">Modalità:</label>
+  <select id="mode" [(ngModel)]="selected" (change)="onModeChange()">
+    <option *ngFor="let c of choices" [value]="c">{{ c }}</option>
+    <option value="Custom">Custom</option>
+  </select>
+
+  <div *ngIf="selected === 'Custom'" class="custom-input">
+    <label for="customMinutes">
+      Minuti (<small>5–10 consigliati</small>):
+    </label>
+    <input
+      id="customMinutes"
+      type="number"
+      [(ngModel)]="customMinutes"
+      min="1"
+      placeholder="Es. 6"
+    />
+  </div>
+
+  <div class="buttons">
+    <button (click)="startTimer()" [disabled]="isRunning">Start</button>
+    <button (click)="stopTimer()" [disabled]="!isRunning">Stop</button>
+  </div>
+
+  <div class="display">{{ displayTime }}</div>
+</div>
+
